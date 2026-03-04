@@ -9,7 +9,7 @@ struct SettingsView: View {
     @State private var newCardKey = ""
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 wifiSection
                 proCardsSection
@@ -19,10 +19,10 @@ struct SettingsView: View {
                 wifiSSID = appState.wifiConfig.ssid
                 wifiPassword = appState.wifiConfig.password
             }
-            .onChange(of: wifiSSID) { _, newValue in
+            .onChange(of: wifiSSID) { newValue in
                 appState.updateWiFiConfig(WiFiConfig(ssid: newValue, password: wifiPassword))
             }
-            .onChange(of: wifiPassword) { _, newValue in
+            .onChange(of: wifiPassword) { newValue in
                 appState.updateWiFiConfig(WiFiConfig(ssid: wifiSSID, password: newValue))
             }
             .sheet(isPresented: $showAddCard) {
@@ -47,6 +47,7 @@ struct SettingsView: View {
                 )
             }
         }
+        .navigationViewStyle(.stack)
     }
     
     private var wifiSection: some View {
@@ -105,7 +106,7 @@ struct AddProCardSheet: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 Section {
                     TextField("MAC address", text: $mac)
@@ -132,5 +133,6 @@ struct AddProCardSheet: View {
                 }
             }
         }
+        .navigationViewStyle(.stack)
     }
 }

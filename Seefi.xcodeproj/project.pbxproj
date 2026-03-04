@@ -295,6 +295,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-deprecated-declarations";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seefi.Seefi;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -381,6 +382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-deprecated-declarations";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seefi.Seefi;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
