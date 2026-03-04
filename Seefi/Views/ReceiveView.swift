@@ -132,7 +132,7 @@ struct ReceiveView: View {
                 DispatchQueue.main.async {
                     isConnectingToWiFi = false
                     if let error = error as NSError? {
-                        if error.domain == NEHotspotConfigurationError.errorDomain,
+                        if error.domain == "NEHotspotConfigurationError",
                            error.code == NEHotspotConfigurationError.userDenied.rawValue {
                             wifiError = "Wi-Fi join was cancelled. Connect manually in Settings, then tap Start Receiving."
                         } else {

@@ -15,13 +15,5 @@ jobs:
       - name: Install XcodeGen
         run: brew install xcodegen
 
-      - name: Generate Xcode project
-        run: xcodegen generate
-
       - name: Build for simulator
-        run: |
-          xcodebuild build \
-            -project Seefi.xcodeproj \
-            -scheme Seefi \
-            -destination 'generic/platform=iOS Simulator' \
-            -configuration Debug
+        run: make build

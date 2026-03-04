@@ -2,11 +2,19 @@ name: Seefi
 options:
   bundleIdPrefix: com.seefi
   deploymentTarget:
-    iOS: "15.0"
+    iOS: "17.0"
   xcodeVersion: "14.0"
   generateEmptyDirectories: true
   groupSortPosition: top
   createIntermediateGroups: true
+
+schemes:
+  Seefi:
+    build:
+      targets:
+        Seefi: all
+    run:
+      executable: Seefi
 
 packages:
   GCDWebServer:
@@ -17,7 +25,7 @@ targets:
   Seefi:
     type: application
     platform: iOS
-    deploymentTarget: "15.0"
+    deploymentTarget: "17.0"
     sources:
       - path: Seefi
         excludes:
