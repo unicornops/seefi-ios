@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/unicornops/seefi-ios/compare/v1.0.0...v1.1.0) (2026-03-04)
+
+
+### Features
+
+* adding agents instructions ([ad98a22](https://github.com/unicornops/seefi-ios/commit/ad98a22392038312135b342ecb1070bac22a739c))
+* adding build and release in GA ([c55adb6](https://github.com/unicornops/seefi-ios/commit/c55adb6d3ee954fe6b8925c015c70a90322712cc))
+* initial commit ([9f22f87](https://github.com/unicornops/seefi-ios/commit/9f22f875587005cf8a014dc57f50375e415cf8ab))
+
+
+### Bug Fixes
+
+* Fix build error ([7bb1a8e](https://github.com/unicornops/seefi-ios/commit/7bb1a8e1f63b014455fe8913aa4df1bdb6910bbe))
+* fix local and ci builds ([31f0440](https://github.com/unicornops/seefi-ios/commit/31f04405d1b51eb022bf4adb5e56598ca81fdd94))
+* fixing build errors because of old MD5 ([b47cd34](https://github.com/unicornops/seefi-ios/commit/b47cd3468f53bfba8d7f2a02e3ef574febc14d92))
+* missing initial files ([056c1c7](https://github.com/unicornops/seefi-ios/commit/056c1c7d12fcd4d2a94593ea537209f75084816b))
+
 ## [1.0.0](https://github.com/lazzurs/seefi-ios/releases/tag/v1.0.0) (2025-03-04)
 
 ### Features
