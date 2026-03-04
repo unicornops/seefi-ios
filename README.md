@@ -39,6 +39,21 @@ The app implements the Wi-Fi SD card SOAP protocol on port 59278:
 
 Credential computation follows the Mobi (zero key) and Pro (upload_key) variants.
 
+## Releases
+
+Releases are automated with [release-please](https://github.com/googleapis/release-please-action). Use [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, etc.) in your commits; release-please will create Release PRs and, when merged, build the iOS app and attach the IPA to the GitHub release.
+
+To enable IPA builds, add these repository secrets (aligned with [github-copilot-notify](https://github.com/unicornops/github-copilot-notify)):
+
+| Secret | Description |
+|--------|-------------|
+| `APPLE_CERTIFICATE_BASE64` | Your distribution certificate (.p12), base64-encoded |
+| `APPLE_CERTIFICATE_PASSWORD` | Password for the .p12 certificate |
+| `APPLE_PROVISIONING_PROFILE_BASE64` | Ad-hoc provisioning profile (.mobileprovision), base64-encoded |
+| `APPLE_TEAM_ID` | Your Apple Developer Team ID (10 characters) |
+
+Convert files to base64: `base64 -i file.p12 | pbcopy`
+
 ## References
 
 - [eyefiserver2](https://github.com/dgrant/eyefiserver2)
