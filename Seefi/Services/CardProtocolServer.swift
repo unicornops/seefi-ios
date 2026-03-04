@@ -30,7 +30,7 @@ final class CardProtocolServer: ObservableObject {
         server.addDefaultHandler(forMethod: "POST", request: GCDWebServerDataRequest.self) { [weak self] request in
             guard let self = self else { return nil }
             let dataRequest = request as! GCDWebServerDataRequest
-            let soapAction = (request.headers["Soapaction"] ?? request.headers["SOAPAction"] ?? "") as? String ?? ""
+            let soapAction = request.headers["Soapaction"] ?? request.headers["SOAPAction"] ?? ""
             
             if request.path == "/api/soap/eyefilm/v1" {
                 if soapAction.contains("StartSession") {

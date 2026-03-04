@@ -7,13 +7,8 @@ final class AppState: ObservableObject {
     @Published var cardConfigurations: [CardConfiguration] = []
     @Published var wifiConfig: WiFiConfig = WiFiConfig()
     
-    let cardProtocolServer: CardProtocolServer
-    
-    private let cardsKey = "seefi.cardConfigurations"
-    private let wifiKey = "seefi.wifiConfig"
-    
-    init() {
-        cardProtocolServer = CardProtocolServer(
+    lazy var cardProtocolServer: CardProtocolServer = {
+        CardProtocolServer(
             cardConfigurations: { [weak self] in self?.cardConfigurations ?? [] },
             onPhotoReceived: { [weak self] photo in
                 Task { @MainActor in
@@ -21,7 +16,12 @@ final class AppState: ObservableObject {
                 }
             }
         )
-        
+    }()
+    
+    private let cardsKey = "seefi.cardConfigurations"
+    private let wifiKey = "seefi.wifiConfig"
+    
+    init() {
         loadPersistedData()
         loadReceivedPhotosFromDisk()
     }
