@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/unicornops/seefi-ios/compare/v1.1.0...v1.1.1) (2026-03-05)
+
+
+### Bug Fixes
+
+* add PROFILE_UUID to environment variables for iOS build ([4c4e7e8](https://github.com/unicornops/seefi-ios/commit/4c4e7e831f76a244bb16f97b05450dc49d646e57))
+
 ## [1.1.0](https://github.com/unicornops/seefi-ios/compare/v1.0.0...v1.1.0) (2026-03-04)
 
 
