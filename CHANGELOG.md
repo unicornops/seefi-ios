@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/unicornops/seefi-ios/compare/v1.1.2...v1.1.3) (2026-03-06)
+
+
+### Bug Fixes
+
+* enhance project configuration for iOS build ([36cbcf7](https://github.com/unicornops/seefi-ios/commit/36cbcf7b0bab0d5dca251a85824f628c402c5220))
+
 ## [1.1.2](https://github.com/unicornops/seefi-ios/compare/v1.1.1...v1.1.2) (2026-03-06)
 
 
