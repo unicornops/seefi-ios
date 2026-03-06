@@ -113,7 +113,7 @@ jobs:
         run: |
           cd $RUNNER_TEMP/ipa
           IPA_FILE=$(ls *.ipa)
-          gh release upload ${{ needs.release-please.outputs.tag_name }} "$IPA_FILE" --clobber
+          gh release upload ${{ needs.release-please.outputs.tag_name }} "$IPA_FILE" --clobber --repo ${{ github.repository }}
 
       - name: Cleanup keychain
         if: always()
