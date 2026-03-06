@@ -81,6 +81,10 @@ jobs:
           echo "TEAM_ID=$TEAM_ID" >> $GITHUB_ENV
           echo "PROFILE_UUID=$PROFILE_UUID" >> $GITHUB_ENV
 
+      - name: Inject provisioning profile into project
+        run: |
+          sed -i '' "s/PROFILE_UUID_PLACEHOLDER/$PROFILE_UUID/g" Seefi.xcodeproj/project.pbxproj
+
       - name: Build archive
         run: |
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_NAME"
@@ -90,9 +94,7 @@ jobs:
             -archivePath $RUNNER_TEMP/Seefi.xcarchive \
             -destination 'generic/platform=iOS' \
             CODE_SIGN_STYLE=Manual \
-            CODE_SIGN_IDENTITY="iPhone Distribution" \
-            DEVELOPMENT_TEAM="$TEAM_ID" \
-            PROVISIONING_PROFILE_SPECIFIER="$PROFILE_UUID"
+            DEVELOPMENT_TEAM="$TEAM_ID"
 
       - name: Prepare ExportOptions.plist
         run: |
