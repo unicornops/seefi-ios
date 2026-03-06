@@ -32,6 +32,7 @@ targets:
           - "*.plist"
     settings:
       base:
+        PRODUCT_BUNDLE_IDENTIFIER: ie.unicornops.seefi
         INFOPLIST_FILE: Seefi/Info.plist
         CODE_SIGN_ENTITLEMENTS: Seefi/Seefi.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
@@ -45,6 +46,9 @@ targets:
         LD_RUNPATH_SEARCH_PATHS:
           - "$(inherited)"
           - "@executable_path/Frameworks"
+      configs:
+        Release:
+          CODE_SIGN_IDENTITY: "iPhone Distribution"
     dependencies:
       - package: GCDWebServer
         product: GCDWebServers

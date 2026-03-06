@@ -90,12 +90,13 @@ jobs:
             -archivePath $RUNNER_TEMP/Seefi.xcarchive \
             -destination 'generic/platform=iOS' \
             CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="iPhone Distribution" \
             DEVELOPMENT_TEAM="$TEAM_ID" \
             PROVISIONING_PROFILE_SPECIFIER="$PROFILE_UUID"
 
       - name: Prepare ExportOptions.plist
         run: |
-          sed "s/TEAM_ID_PLACEHOLDER/$TEAM_ID/g" .github/ExportOptions.plist > $RUNNER_TEMP/ExportOptions.plist
+          sed -e "s/TEAM_ID_PLACEHOLDER/$TEAM_ID/g" -e "s/PROFILE_UUID_PLACEHOLDER/$PROFILE_UUID/g" .github/ExportOptions.plist > $RUNNER_TEMP/ExportOptions.plist
 
       - name: Export IPA
         run: |

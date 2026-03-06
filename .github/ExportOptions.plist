@@ -6,5 +6,10 @@
 	<string>ad-hoc</string>
 	<key>teamID</key>
 	<string>TEAM_ID_PLACEHOLDER</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>ie.unicornops.seefi</key>
+		<string>PROFILE_UUID_PLACEHOLDER</string>
+	</dict>
 </dict>
 </plist>
