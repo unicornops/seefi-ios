@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/unicornops/seefi-ios/compare/v1.1.3...v1.1.4) (2026-03-06)
+
+
+### Bug Fixes
+
+* specify repository in release upload command ([09af610](https://github.com/unicornops/seefi-ios/commit/09af6105acc15fde885152ec2d6e222791c24917))
+
 ## [1.1.3](https://github.com/unicornops/seefi-ios/compare/v1.1.2...v1.1.3) (2026-03-06)
 
 
