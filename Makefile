@@ -36,7 +36,7 @@ build: generate
 	xcodebuild build \
 		-project $(PROJECT).xcodeproj \
 		-scheme $(SCHEME) \
-		-destination 'platform=iOS Simulator,OS=18.6,name=iPhone 16' \
+		-destination 'generic/platform=iOS Simulator' \
 		-configuration $(CONFIGURATION)
 
 build-release: CONFIGURATION = Release
